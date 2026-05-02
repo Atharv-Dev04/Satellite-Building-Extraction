@@ -1,5 +1,9 @@
 # 🛰️ Satellite Segmentation Benchmark Project
 
+![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)
+![Status](https://img.shields.io/badge/status-active-success.svg)
+
 An end-to-end AI pipeline for high-precision building and road segmentation from 16-bit satellite imagery. This project features a comparative benchmark of five state-of-the-art architectures and an optimized data preprocessing pipeline.
 
 ## 🚀 Project Overview
@@ -13,6 +17,30 @@ The project follows a streamlined 6-step workflow:
 5. **Training** (`train_model_v1.py` / `train_model_v2.py`): Trains any of the 5 supported architectures.
 6. **Visual Evaluation** (`visualize_model_v1.py` / `visualize_model_v2.py`): Generates mapping overlays.
 7. **Unseen Inference** (`inference_batch.py`): Runs the model on entirely new satellite imagery (Phase 3).
+
+---
+
+## 💻 Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/satellite-segmentation-benchmark.git
+   cd satellite-segmentation-benchmark
+   ```
+
+2. **Set up the Python environment:**
+   Create a virtual environment and activate it:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install Dependencies:**
+   Ensure you have PyTorch installed for your specific CUDA version, then install the required packages:
+   ```bash
+   pip install torch torchvision torchaudio
+   pip install segmentation-models-pytorch rasterio opencv-python matplotlib numpy pandas scikit-learn albumentations
+   ```
 
 ---
 
@@ -54,9 +82,9 @@ The project follows a streamlined 6-step workflow:
 ├── inference_batch.py     # Step 7: Batch Inference on unseen data
 ├── compare_models.py      # Multi-model Comparison Grid
 ├── inspect_data.py        # Centralized Diagnostic Utility
-├── dataset_split/         # Final partitioned dataset 
-├── Inference_Results_Image5/ # Raw inference outputs
-└── results_v2/            # Metrics and checkpoints
+├── dataset_split/         # Final partitioned dataset (Ignored in Git)
+├── Inference_Results_Image5/ # Raw inference outputs (Ignored in Git)
+└── results_v2/            # Metrics and checkpoints (Ignored in Git)
 ```
 
 ---
@@ -75,6 +103,6 @@ A one-stop script to organize your raw patches into a structured `dataset_split`
 ---
 
 ## 📜 Reports
-- [Detailed Research Report](file:///d:/Research%20Project/Final_Research_Report.md)
-- [Architecture Benchmark Analysis](file:///d:/Research%20Project/Final_Benchmark_Report.md)
-- [Unseen Inference Benchmark](file:///d:/Research%20Project/Model_Inference_Benchmark.md)
+- [Detailed Research Report](./Final_Research_Report.md)
+- [Architecture Benchmark Analysis](./Final_Benchmark_Report.md)
+- [Unseen Inference Benchmark](./Model_Inference_Benchmark.md)
