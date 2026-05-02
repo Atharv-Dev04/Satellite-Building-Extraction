@@ -1,0 +1,30 @@
+# Datasets and Large Data Folders
+Data/
+Dataset/
+dataset_split/
+
+# Model Weights, Logs, and Output Folders
+results_v1/
+results_v2/
+Benchmark_Results/
+Inference_Results_Image5/
+Output/
+
+# Python Cache and Environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# Agent and System Cache
+cache/
+scratch/
+.DS_Store
+
+# Ignore all CSV and PNG files
+*.csv
+*.png
